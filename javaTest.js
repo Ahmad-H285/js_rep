@@ -1,3 +1,4 @@
+
 var mylinks=document.getElementsByTagName('a');
 console.log("Links: ", mylinks.length);
 
@@ -9,7 +10,7 @@ console.log(mainheader.innerHTML);
 	alert("You clicked somewhere in the document");
 };
 */
-
+/*
 myImage= document.getElementById("main-image");
 
 myImage.onclick= function(){
@@ -31,5 +32,26 @@ emailField.onblur= function(){
 function simpleMessage(){
 	alert("Time out");
 }
+*/
+function eventhandler(){
+	document.getElementById("form-contact").onsubmit= function(){
+		if(document.getElementById("email").value==""){
+			document.getElementById("Error-message").innerHTML="Please insert the email";
+			document.getElementById("Error-message").style.color="red";
+			return false;
+		}
 
-setTimeout(simpleMessage,5000);
+		else{
+			document.getElementById("Error-message").innerHTML="";
+			return true; 
+		}
+	};
+
+
+}
+
+window.onload= function(){ 
+		eventhandler();
+		}
+
+//setTimeout(simpleMessage,5000);
