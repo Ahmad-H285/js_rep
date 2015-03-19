@@ -20,7 +20,7 @@ myImage.onclick= function(){
 var emailField= document.getElementById("email");
 
 emailField.onfocus= function(){
-	if(emailField.value=="Your Email")
+	if(emailField.value=="Your Email"
 	emailField.value= "";	
 }
 
@@ -33,6 +33,8 @@ function simpleMessage(){
 	alert("Time out");
 }
 */
+
+
 function eventhandler(){
 	document.getElementById("form-contact").onsubmit= function(){
 		if(document.getElementById("email").value==""){
@@ -52,6 +54,13 @@ function eventhandler(){
 
 window.onload= function(){ 
 		eventhandler();
-		}
+		};
+
+//$("label, p, h1, title, #main-image").hide(1000);
+$("label, h1").click(function(){
+	$(this).fadeOut();
+});
+
+//jQuery("#main-header").animate();
 
 //setTimeout(simpleMessage,5000);
