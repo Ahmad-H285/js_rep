@@ -18,7 +18,53 @@
         //$("td:odd").css("border","3px solid red");
         //$("p:even").css("border","3px solid red");
         //$("p:not(p:eq(1))").css("border","3px solid red");
-        $("div  p").css("border","3px solid red");
+        //$("div  p").css("border","3px solid red");
+        //$("p[class]").css("border","3px solid red");
+        //$("td[id^=cont]").css("border","3px solid red");
+        //$("p:contains('paradise')").css("border","3px solid red");
+        //$("div:has(p[class=test])").css("border","3px solid red");
+        //$("div p:first-child").css("border","3px solid red");
+        //$("#mainContent").children().css("border","3px solid red");
+        // var elem= $(".test");
+        // elem.prev().css("border","3px solid red");
+        // elem.next().css("border","3px solid green");
+        // //elem.parents().css("border","3px solid blue");
+        // elem.parentsUntil($("body")).css("border","3px solid blue")
+        //$("#mainContent").find(".test").css("border","3px solid red");
+        // document.getElementById("create").addEventListener("click",
+        //     function(evt){
+        //         createContent();
+        //     });
+
+        // document.getElementById("change").addEventListener("click",
+        //     function(evt){
+        //         changeContent();
+        //     });    
+        // document.getElementById("changeAll").addEventListener("click",
+        //     function(evt){
+        //         changeAllTheContent();
+        //     });    
+
+        // function createContent(){
+        // //     $("#mainContent").html("<p>Hi There</p>");
+        //     var newItem= $("<p>Replaced paragraph</p>");
+        //     $("#rep").html(newItem);
+        //  }
+
+        // function changeContent(){
+        //     $("p:last").text("Content changed");
+        // } 
+
+        // function changeAllTheContent(){
+        //     $("#mainContent p").text("All contents has been changed");
+        // }
+
+        //$("#mainContent p").append("Some content has been appended");
+        //$("#mainContent p").prepend("////Some content has been prepended to this paragraph////");
+        //$("#mainContent p").appendTo("#sideBar p");
+        //$("#mainContent p").wrap("<div style='border: 3px solid red' />");
+        //mainContent p").wrapAll("<div style='border: 3px solid red' />");
+        //$("#mainContent p").empty();
     });
     </script>
 </head>
@@ -70,7 +116,7 @@
                         <li>Surf condition reports</li>
                         <li>... and much more!</li>
                     </ul>
-                    <p>
+                    <p class="test">
                     So take off your sandals and wax your board up... you're here.
                     </p>
                     <h2>Latest News</h2>
@@ -107,7 +153,7 @@
 
                     <img class="photo" src="images/surf1.jpg" width="200" height="160" alt="surfer" />
                     <h3>This month's surfer's journal</h3>
-                    <p>
+                    <p id="rep">
                     Josh Cambria pens this month's surfer journal. Check out his month-long surfing experience as he surfs up the
                     coast from San Diego up to Ventura. Along the way he meets several celebrities and finds a new favorite board.
                     <a href="lifestyle/journal.htm">Check it out</a>.
@@ -127,7 +173,11 @@
                     almost gets run over by wind surfers in Ventura and we are there!
                     <a href="lifestyle/photos.htm">You know you want to watch!</a>
                     </p>
-
+                    <div>
+                            <button id="create">Create Content</button>
+                            <button id="change">Change Content</button>
+                            <button id="changeAll">Change All</button>
+                    </div>
                 </div> <!-- sideBar -->
             </td>
         </tr></table>
