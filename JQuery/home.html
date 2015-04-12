@@ -9,7 +9,7 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="jquery-1.11.2.js"></script>
     <script type="text/javascript">
-    $("document").ready(function(){
+    //$("document").ready(function(){
         //$("p").css("border","3px solid red");
         //$(".photo").css("border","3px solid red");
         //$("#contentTable").css("border","3px solid red");
@@ -65,11 +65,46 @@
         //$("#mainContent p").wrap("<div style='border: 3px solid red' />");
         //mainContent p").wrapAll("<div style='border: 3px solid red' />");
         //$("#mainContent p").empty();
-        $("img").attr("title","Taken by me");
-        $("img").attr("target","_blank");
-        $("img").removeAttr("title");
-    });
+        // $("img").attr("title","Taken by me");
+        // $("img").attr("target","_blank");
+        // $("img").removeAttr("title");
+    //});
+
+        // $(function(){
+        //     $("#mainContent").hover(highlight, highlight);
+        // });
+
+        // function highlight(evt){
+        //     $("#mainContent").toggleClass("highlighted");
+        // }
+        $(function() {
+
+            $("#show").click(function(){
+                $("#mainContent").slideUp(1000);
+            });
+            
+            $("#hide").click(function(){
+                $("#mainContent").slideDown(200);
+            });
+
+            $("#toggle").click(function(){
+                $("#mainContent").slideToggle("slow", ontoggle);
+            });
+
+            function ontoggle(){
+                    console.log("slide feature happened on:"+ this.id);
+            }
+
+        });
+
     </script>
+    
+    <style type="text/css">
+        .highlighted{
+            border: 3px solid red;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -103,7 +138,7 @@
                 <div id="mainContent">
 
                     <h1>Welcome to Groundswell</h1>
-                    <a><p>
+                    <a id="test2"><p>
                     What is surf paradise? Is it a place? A state of mind? What does surf paradise mean to you? Groundswell is
                     all about finding that place. Whether it's checking out the latest gear, immersing yourself in the surfing
                     lifestyle, or watching some of the sickest video this side of the pipeline, we've got you covered. 
@@ -177,9 +212,9 @@
                     <a href="lifestyle/photos.htm">You know you want to watch!</a>
                     </p>
                     <div>
-                            <button id="create">Create Content</button>
-                            <button id="change">Change Content</button>
-                            <button id="changeAll">Change All</button>
+                            <button id="show">Show Content</button>
+                            <button id="hide">Hide Content</button>
+                            <button id="toggle">Toggle</button>
                     </div>
                 </div> <!-- sideBar -->
             </td>
