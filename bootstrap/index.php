@@ -14,8 +14,8 @@
 	  	<div class="content row">
 	  		
 	  	<section class="main col col-lg-8">
+	  		<?php include "_/components/php/header.php"; ?>
 
-	  		
 	  	</section><!-- main -->
 
 	  	<section class="sidebar col col-lg-4">
@@ -25,9 +25,12 @@
 
 	  	</div><!-- content -->
 
+	  	<?php include "_/components/php/footer.php"; ?>
+
 	  </section><!-- container -->
-    
-    <script src="_/js/bootstrap.js"></script>
+
+    <script src="_/components/js/jquery.js"></script>
+	<script src="_/js/bootstrap.js"></script>
     <script src="_/js/myscript.js"></script>
-  </body>
+      </body>
 </html>
